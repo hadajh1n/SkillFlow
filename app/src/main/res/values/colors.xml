@@ -14,7 +14,14 @@
     <color name="edtEmailPasswordHint">#B5B8B1</color>
     <color name="btnEntranceBg">#12B956</color>
     <color name="btnEntranceText">#F2F2F3</color>
-
-
+    <color name="tvTitleRegistration">#F2F2F3</color>
+    <color name="tvRegistration">#12B956</color>
+    <color name="tvForgotPassword">#12B956</color>
+    <color name="viewSeparator">#4D555E</color>
+    <color name="logoVK">#FFFFFF</color>
+    <color name="logoVKBg">#2683ED</color>
+    <color name="logoOK">#FFFFFF</color>
+    <color name="logoOKBg1">#F98509</color>
+    <color name="logoOKBg2">#F95D00</color>
 
 </resources>

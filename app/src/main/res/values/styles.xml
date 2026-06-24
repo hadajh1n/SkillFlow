@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    // fragment_login
+
     <style name="tvTitleEntrance" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">28sp</item>
         <item name="android:fontFamily">roboto</item>
@@ -26,6 +28,27 @@
         <item name="android:fontFamily">roboto</item>
         <item name="android:backgroundTint">@color/btnEntranceBg</item>
         <item name="android:textColor">@color/btnEntranceText</item>
+    </style>
+
+    <style name="tvTitleRegistration" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvTitleRegistration</item>
+    </style>
+
+    <style name="tvRegistration" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvRegistration</item>
+    </style>
+
+    <style name="tvForgotPassword" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">roboto</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvForgotPassword</item>
     </style>
 
 </resources>

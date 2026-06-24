@@ -10,5 +10,8 @@
     <string name="tvTitlePassword">Пароль</string>
     <string name="hintPassword">Введите пароль</string>
     <string name="btnEntranceText">Вход</string>
+    <string name="tvTitleRegistration">Нет аккаунта?</string>
+    <string name="tvRegistration">Регистрация</string>
+    <string name="tvForgotPassword">Забыл пароль</string>
 
 </resources>

@@ -97,4 +97,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cvPassword" />
 
+    <LinearLayout
+        android:id="@+id/llRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEntrance">
+
+        <TextView
+            android:id="@+id/tvTitleRegistration"
+            style="@style/tvTitleRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/tvTitleRegistration"/>
+
+        <TextView
+            android:id="@+id/tvRegistration"
+            style="@style/tvRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/tvRegistration"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvForgotPassword"
+        style="@style/tvForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/tvForgotPassword"
+        app:layout_constraintEnd_toEndOf="@+id/llRegistration"
+        app:layout_constraintStart_toStartOf="@+id/llRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/llRegistration" />
+
+    <View
+        android:id="@+id/viewSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@color/viewSeparator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvForgotPassword" />
+
+    <LinearLayout
+        android:id="@+id/llLogo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewSeparator">
+
+        <ImageButton
+            android:id="@+id/imLogoVK"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/icon_vk"
+            android:background="@drawable/background_vk"
+            android:layout_weight="1"/>
+
+        <ImageButton
+            android:id="@+id/imLogoOK"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/icon_ok"
+            android:background="@drawable/background_ok"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
