@@ -31,4 +31,10 @@
     <string name="tvExitProfile">Выйти из аккаунта</string>
     <string name="tvProfileCourses">Ваши курсы</string>
 
+    // fragment_details
+    <string name="tvTitleAuthorDescription">Автор</string>
+    <string name="btnStartCourseText">Начать курс</string>
+    <string name="btnPlatformCourseText">Перейти на платформу</string>
+    <string name="tvTitleAboutCourseDetails">О курсе</string>
+
 </resources>

@@ -115,4 +115,43 @@
         <item name="android:textColor">@color/tvProfileCourses</item>
     </style>
 
+    // fragment_details
+
+    <style name="tvTitleCourseDetails" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/tvTitleCourseDetails</item>
+    </style>
+
+    <style name="tvTitleAuthorDescription" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/tvTitleAuthorDescription</item>
+    </style>
+
+    <style name="tvAuthorDescription" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/tvAuthorDescription</item>
+    </style>
+
+    <style name="btnStartCourseText" parent="Widget.Material3.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:backgroundTint">@color/btnStartCourseBg</item>
+        <item name="android:textColor">@color/btnStartCourseText</item>
+    </style>
+
+    <style name="btnPlatformCourseText" parent="Widget.Material3.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:backgroundTint">@color/btnPlatformCourseBg</item>
+        <item name="android:textColor">@color/btnPlatformCourseText</item>
+    </style>
+
+    <style name="tvTitleAboutCourseDetails" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/tvTitleAboutCourseDetails</item>
+    </style>
+
+    <style name="tvAboutCourseDetails" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/tvAboutCourseDetails</item>
+    </style>
+
 </resources>

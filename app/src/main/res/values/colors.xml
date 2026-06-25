@@ -57,4 +57,19 @@
     <color name="viewSeparatorProfile">#4D555E</color>
     <color name="tvProfileCourses">#F2F2F3</color>
 
+    // fragment_details
+    <color name="iconBackDetails">#151515</color>
+    <color name="iconBackDetailsBg">#F2F2F3</color>
+    <color name="iconFavoritesDetails">#151515</color>
+    <color name="iconFavoritesDetailsBg">#F2F2F3</color>
+    <color name="tvTitleCourseDetails">#F2F2F3</color>
+    <color name="tvTitleAuthorDescription">#B5B8B1</color>
+    <color name="tvAuthorDescription">#F2F2F3</color>
+    <color name="btnStartCourseText">#F2F2F3</color>
+    <color name="btnStartCourseBg">#12B956</color>
+    <color name="btnPlatformCourseText">#F2F2F3</color>
+    <color name="btnPlatformCourseBg">#24252A</color>
+    <color name="tvTitleAboutCourseDetails">#F2F2F3</color>
+    <color name="tvAboutCourseDetails">#B5B8B1</color>
+
 </resources>
