@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/general_theme_background"
+    android:focusableInTouchMode="true"
+    tools:context=".ui.fragment.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/llSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvSearch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/cvSearchBg"
+            android:layout_weight="1"
+            app:cardCornerRadius="28dp">
+
+            <ImageView
+                android:id="@+id/imSearch"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/icon_search"/>
+
+            <EditText
+                android:id="@+id/edtSearch"
+                style="@style/edtSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="56dp"
+                android:hint="@string/hintSearch"
+                android:maxLines="1"
+                android:scrollHorizontally="true"/>
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/ibFilter"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/icon_filter"
+            android:background="@drawable/icon_filter_bg"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSort"
+        style="@style/tvSort"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/tvSort"
+        android:drawableEnd="@drawable/icon_sort"
+        app:layout_constraintEnd_toEndOf="@+id/llSearch"
+        app:layout_constraintTop_toBottomOf="@+id/llSearch"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCourses"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSort"
+        tools:listitem="@layout/item_course_home"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

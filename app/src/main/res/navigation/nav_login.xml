@@ -8,4 +8,8 @@
         android:id="@+id/loginFragment"
         android:name="com.example.skillflow.ui.fragment.LoginFragment"/>
 
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.skillflow.ui.fragment.MainFragment"/>
+
 </navigation>

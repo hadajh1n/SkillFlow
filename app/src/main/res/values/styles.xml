@@ -51,4 +51,44 @@
         <item name="android:textColor">@color/tvForgotPassword</item>
     </style>
 
+    // fragment_home
+
+    <style name="edtSearch" parent="Widget.AppCompat.EditText">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/edtSearchText</item>
+        <item name="android:textColorHint">@color/edtSearchHint</item>
+        <item name="android:background">@color/transparent</item>
+    </style>
+
+    <style name="tvSort" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvSort</item>
+    </style>
+
+    // item_course_home
+
+    <style name="tvTitleItemCourse" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvTitleItemCourse</item>
+    </style>
+
+    <style name="tvItemCourseDescription" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/tvItemCourseDescription</item>
+    </style>
+
+    <style name="tvItemCourseCost" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvItemCourseCost</item>
+    </style>
+
+    <style name="tvItemCourseDetails" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvItemCourseDetails</item>
+    </style>
+
 </resources>

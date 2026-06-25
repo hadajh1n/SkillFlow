@@ -6,6 +6,10 @@
 
     <color name="general_theme_background">#151515</color>
 
+    // bottom_nav_menu
+    <color name="bottomNavigationBg">#24252A</color>
+    <color name="iconsMenu">#F2F2F3</color>
+
     // fragment_login
     <color name="tvTitleEntrance">#F2F2F3</color>
     <color name="tvTitleEmailPassword">#F2F2F3</color>
@@ -23,5 +27,22 @@
     <color name="logoOK">#FFFFFF</color>
     <color name="logoOKBg1">#F98509</color>
     <color name="logoOKBg2">#F95D00</color>
+
+    // fragment_home
+    <color name="loupeSearch">#F2F2F3</color>
+    <color name="cvSearchBg">#24252A</color>
+    <color name="edtSearchText">#F2F2F3</color>
+    <color name="edtSearchHint">#B5B8B1</color>
+    <color name="ibFilter">#F2F2F3</color>
+    <color name="ibFilterBg">#24252A</color>
+    <color name="tvSort">#12B956</color>
+    <color name="iconArrow">#12B956</color>
+
+    // item_course_home
+    <color name="cvItemCourse">#24252A</color>
+    <color name="tvTitleItemCourse">#F2F2F3</color>
+    <color name="tvItemCourseDescription">#B5B8B1</color>
+    <color name="tvItemCourseCost">#F2F2F3</color>
+    <color name="tvItemCourseDetails">#12B956</color>
 
 </resources>
