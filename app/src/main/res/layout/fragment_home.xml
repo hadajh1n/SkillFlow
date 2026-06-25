@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/general_theme_background"
     android:focusableInTouchMode="true"
-    tools:context=".ui.fragment.HomeFragment">
+    tools:context=".ui.fragment.main.HomeFragment">
 
     <LinearLayout
         android:id="@+id/llSearch"

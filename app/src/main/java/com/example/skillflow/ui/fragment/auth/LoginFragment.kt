@@ -1,4 +1,4 @@
-package com.example.skillflow.ui.fragment
+package com.example.skillflow.ui.fragment.auth
 
 import android.os.Bundle
 import android.view.LayoutInflater

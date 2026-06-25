@@ -9,6 +9,8 @@
     // bottom_nav_menu
     <color name="bottomNavigationBg">#24252A</color>
     <color name="iconsMenu">#F2F2F3</color>
+    <color name="bottomNavSelector">#12B956</color>
+    <color name="bottomNavSelectorDefault">#F2F2F3</color>
 
     // fragment_login
     <color name="tvTitleEntrance">#F2F2F3</color>
@@ -44,5 +46,8 @@
     <color name="tvItemCourseDescription">#B5B8B1</color>
     <color name="tvItemCourseCost">#F2F2F3</color>
     <color name="tvItemCourseDetails">#12B956</color>
+
+    // fragment_favorites
+    <color name="tvFavoritesTitle">#F2F2F3</color>
 
 </resources>

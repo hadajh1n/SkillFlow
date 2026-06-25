@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/general_theme_background"
-    tools:context=".ui.fragment.LoginFragment">
+    tools:context=".ui.fragment.auth.LoginFragment">
 
     <TextView
         android:id="@+id/tvTitleEntrance"

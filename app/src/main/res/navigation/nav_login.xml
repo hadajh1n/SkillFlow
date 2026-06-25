@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.skillflow.ui.fragment.LoginFragment"/>
+        android:name="com.example.skillflow.ui.fragment.auth.LoginFragment"/>
 
     <fragment
         android:id="@+id/mainFragment"

@@ -21,4 +21,7 @@
     <string name="hintSearch">Поиск курсов...</string>
     <string name="tvSort">По дате добавления</string>
 
+    // fragment_favorites
+    <string name="tvFavoritesTitle">Избранное</string>
+
 </resources>

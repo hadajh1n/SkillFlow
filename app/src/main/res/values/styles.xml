@@ -91,4 +91,11 @@
         <item name="android:textColor">@color/tvItemCourseDetails</item>
     </style>
 
+    // fragment_favorites
+
+    <style name="tvFavoritesTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/tvFavoritesTitle</item>
+    </style>
+
 </resources>
