@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="8dp"
+    android:height="13dp"
+    android:viewportWidth="8"
+    android:viewportHeight="13">
+
+    <path
+        android:fillColor="@color/tvProfileButtons"
+        android:pathData="M7.16434 6.14477C7.16434 5.86422 7.0617 5.63157 6.84273 5.4126L1.57383 0.260024C1.39592 0.0821128 1.18379 0 0.930611 0C0.417407 0 0 0.403721 0 0.916926C0 1.17011 0.109484 1.40276 0.294237 1.58751L4.97467 6.13793L0.294237 10.702C0.109484 10.8868 0 11.1126 0 11.3726C0 11.8858 0.417407 12.2964 0.930611 12.2964C1.18379 12.2964 1.39592 12.2074 1.57383 12.0295L6.84273 6.87694C7.06854 6.65798 7.16434 6.42532 7.16434 6.14477Z" />
+</vector>

@@ -24,4 +24,11 @@
     // fragment_favorites
     <string name="tvFavoritesTitle">Избранное</string>
 
+    // fragment_profile
+    <string name="tvProfileTitle">Профиль</string>
+    <string name="tvSupport">Написать в поддержку</string>
+    <string name="tvSettings">Настройки</string>
+    <string name="tvExitProfile">Выйти из аккаунта</string>
+    <string name="tvProfileCourses">Ваши курсы</string>
+
 </resources>

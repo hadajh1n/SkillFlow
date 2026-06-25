@@ -12,4 +12,8 @@
         android:id="@+id/favoritesFragment"
         android:name="com.example.skillflow.ui.fragment.main.FavoritesFragment"/>
 
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.skillflow.ui.fragment.main.ProfileFragment"/>
+
 </navigation>

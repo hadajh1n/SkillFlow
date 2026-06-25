@@ -23,7 +23,7 @@
     <color name="tvTitleRegistration">#F2F2F3</color>
     <color name="tvRegistration">#12B956</color>
     <color name="tvForgotPassword">#12B956</color>
-    <color name="viewSeparator">#4D555E</color>
+    <color name="viewSeparatorLogin">#4D555E</color>
     <color name="logoVK">#FFFFFF</color>
     <color name="logoVKBg">#2683ED</color>
     <color name="logoOK">#FFFFFF</color>
@@ -49,5 +49,12 @@
 
     // fragment_favorites
     <color name="tvFavoritesTitle">#F2F2F3</color>
+
+    // fragment_profile
+    <color name="cvProfile">#24252A</color>
+    <color name="tvProfileTitle">#F2F2F3</color>
+    <color name="tvProfileButtons">#F2F2F3</color>
+    <color name="viewSeparatorProfile">#4D555E</color>
+    <color name="tvProfileCourses">#F2F2F3</color>
 
 </resources>

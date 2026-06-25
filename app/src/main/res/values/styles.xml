@@ -98,4 +98,21 @@
         <item name="android:textColor">@color/tvFavoritesTitle</item>
     </style>
 
+    // fragment_profile
+
+    <style name="tvProfileTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/tvProfileTitle</item>
+    </style>
+
+    <style name="tvProfileButtons" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/tvProfileButtons</item>
+    </style>
+
+    <style name="tvProfileCourses" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/tvProfileCourses</item>
+    </style>
+
 </resources>
