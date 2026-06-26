@@ -91,6 +91,16 @@
         <item name="android:textColor">@color/tvItemCourseDetails</item>
     </style>
 
+    <style name="tvRate" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/tvRate</item>
+    </style>
+
+    <style name="tvDateCourse" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/tvDateCourse</item>
+    </style>
+
     // fragment_favorites
 
     <style name="tvFavoritesTitle" parent="Widget.AppCompat.TextView">

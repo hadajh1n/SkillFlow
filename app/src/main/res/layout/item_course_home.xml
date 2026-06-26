@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp">
@@ -30,7 +31,65 @@
                 <ImageView
                     android:id="@+id/imItemCourse"
                     android:layout_width="match_parent"
-                    android:layout_height="150dp"/>
+                    android:layout_height="150dp"
+                    tools:background="@color/btnEntranceBg"/>
+                
+                <ImageButton
+                    android:id="@+id/imAddFavorites"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/icon_favorites"
+                    android:background="@drawable/background_favorites"/>
+                
+                <LinearLayout
+                    android:id="@+id/llRate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="bottom">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/cvRateBg"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tvRate"
+                            style="@style/tvRate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:drawableStart="@drawable/icon_star"
+                            tools:text="4.9"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvDateCourse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:backgroundTint="@color/cvRateBg"
+                        app:cardCornerRadius="12dp">
+
+                        <TextView
+                            android:id="@+id/tvDateCourse"
+                            style="@style/tvDateCourse"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            tools:text="22 Мая 2024"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 

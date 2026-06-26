@@ -5,6 +5,10 @@
     <color name="transparent">#00FFFFFF</color>
 
     <color name="general_theme_background">#151515</color>
+    <color name="icon_star">#12B956</color>
+    <color name="iconFavoritesAdded">#12B956</color>
+    <color name="iconFavoritesBg">#32333A4D</color>
+    <color name="cvRateBg">#32333A4D</color>
 
     // bottom_nav_menu
     <color name="bottomNavigationBg">#24252A</color>
@@ -46,6 +50,8 @@
     <color name="tvItemCourseDescription">#B5B8B1</color>
     <color name="tvItemCourseCost">#F2F2F3</color>
     <color name="tvItemCourseDetails">#12B956</color>
+    <color name="tvRate">#F2F2F3</color>
+    <color name="tvDateCourse">#F2F2F3</color>
 
     // fragment_favorites
     <color name="tvFavoritesTitle">#F2F2F3</color>
