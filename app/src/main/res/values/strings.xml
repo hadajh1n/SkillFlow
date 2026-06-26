@@ -16,6 +16,7 @@
     <string name="tvTitleRegistration">Нет аккаунта?</string>
     <string name="tvRegistration">Регистрация</string>
     <string name="tvForgotPassword">Забыл пароль</string>
+    <string name="error_invalid_email">Неверный формат email</string>
 
     // fragment_home
     <string name="hintSearch">Поиск курсов...</string>
