@@ -5,7 +5,6 @@ import com.example.skillflow.core.app.SkillFlowApp
 import com.example.skillflow.data.dataclass.CourseDTO
 import com.example.skillflow.data.mapper.CourseDtoEntityMapper
 import com.example.skillflow.data.room.AppDatabase
-import com.example.skillflow.data.room.CourseEntity
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
@@ -19,7 +18,7 @@ object AppRepository {
         Room.databaseBuilder(
             SkillFlowApp.Companion.instance.applicationContext,
             AppDatabase::class.java,
-            "voice-note-db"
+            "skillflow-db"
         ).build()
     }
 
@@ -36,5 +35,11 @@ object AppRepository {
         }
     }
 
-    suspend fun getAllCourses(): List<CourseEntity> = courseDao.getAllCourses()
+    fun getAllCourses() = courseDao.getAllCourses()
+
+    fun getAllCoursesFavorites() = courseDao.getAllCoursesFavorites()
+
+    suspend fun toggleFavorite(courseId: Int) {
+        courseDao.toggleFavorite(courseId)
+    }
 }

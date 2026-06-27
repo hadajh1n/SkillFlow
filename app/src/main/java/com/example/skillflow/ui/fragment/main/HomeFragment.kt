@@ -28,7 +28,7 @@ class HomeFragment : Fragment() {
 
         },
         onFavoriteClick = { course ->
-
+            viewModel.toggleFavorite(course.id)
         }
     )
 

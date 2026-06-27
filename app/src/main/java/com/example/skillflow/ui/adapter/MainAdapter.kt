@@ -10,10 +10,11 @@ class MainAdapter(
 ) : AsyncListDifferDelegationAdapter<CourseUI>(CourseDiffCallback()) {
 
     init {
-        delegatesManager.addDelegate(courseAdapterDelegate(onItemClick, onFavoriteClick))
+        delegatesManager.addDelegate(courseAdapter(onItemClick, onFavoriteClick))
     }
 
     class CourseDiffCallback : DiffUtil.ItemCallback<CourseUI>() {
+
         override fun areItemsTheSame(oldItem: CourseUI, newItem: CourseUI): Boolean {
             return oldItem.id == newItem.id
         }

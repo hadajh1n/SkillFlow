@@ -10,7 +10,7 @@ class CourseUiMapper {
             id = entity.id,
             title = entity.title,
             text = entity.text,
-            price = entity.price,
+            price = "${entity.price} ₽",
             rate = entity.rate,
             startDate = entity.startDate,
             hasLike = entity.hasLike,

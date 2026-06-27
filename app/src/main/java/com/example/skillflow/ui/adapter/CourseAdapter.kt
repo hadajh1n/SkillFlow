@@ -5,11 +5,12 @@ import com.example.skillflow.data.dataclass.CourseUI
 import com.example.skillflow.databinding.ItemCourseHomeAndFavoritesBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
-fun courseAdapterDelegate(
+fun courseAdapter(
     onItemClick: (CourseUI) -> Unit,
     onFavoriteClick: (CourseUI) -> Unit
 ) = adapterDelegateViewBinding<CourseUI, CourseUI, ItemCourseHomeAndFavoritesBinding>(
-    { layoutInflater, root -> ItemCourseHomeAndFavoritesBinding.inflate(layoutInflater, root, false) }
+    { layoutInflater, root -> ItemCourseHomeAndFavoritesBinding
+        .inflate(layoutInflater, root, false) }
 ) {
     binding.root.setOnClickListener { onItemClick(item) }
 
@@ -17,9 +18,10 @@ fun courseAdapterDelegate(
 
     bind {
         with(binding) {
+            imItemCourse.setImageResource(getCourseImageRes(item.id))
             tvTitleItemCourse.text = item.title
             tvItemCourseDescription.text = item.text
-            tvItemCourseCost.text = "${item.price} ₽"
+            tvItemCourseCost.text = item.price
             tvRate.text = item.rate
             tvDateCourse.text = item.startDate
 
@@ -31,4 +33,14 @@ fun courseAdapterDelegate(
             imAddFavorites.setImageResource(favIcon)
         }
     }
+}
+
+// Так как полей с url в json нет сделал заглушку
+private fun getCourseImageRes(courseId: Int): Int = when (courseId) {
+    100 -> R.drawable.img
+    101 -> R.drawable.img
+    102 -> R.drawable.img
+    103 -> R.drawable.img
+    104 -> R.drawable.img
+    else -> R.drawable.img
 }
