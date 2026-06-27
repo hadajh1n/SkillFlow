@@ -1,10 +1,14 @@
 package com.example.skillflow.ui.viewModel
 
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.skillflow.core.utils.EmailValidator
+import com.example.skillflow.data.repository.AppRepository
+import com.example.skillflow.network.RetrofitClient
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
 
 class LoginViewModel : ViewModel() {
 
@@ -31,7 +35,16 @@ class LoginViewModel : ViewModel() {
         _isLoginEnabled.value = isEmailValid && isPasswordValid
     }
 
-    fun login() {
+    fun login(onSuccess: () -> Unit) {
+        viewModelScope.launch {
+            try {
+                val response = RetrofitClient.courseApi.getCourses()
 
+                AppRepository.setCourse(response.courses)
+                onSuccess()
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
     }
 }

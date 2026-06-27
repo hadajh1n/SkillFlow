@@ -80,8 +80,9 @@ class LoginFragment : Fragment() {
 
     private fun setupButtons() = with(binding) {
         btnEntrance.setOnClickListener {
-            viewModel.login()
-            findNavController().navigate(R.id.mainFragment)
+            viewModel.login {
+                findNavController().navigate(R.id.mainFragment)
+            }
         }
 
         imLogoVK.setOnClickListener { openBrowser(Constants.VK_URL) }

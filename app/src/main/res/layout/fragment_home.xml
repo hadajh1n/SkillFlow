@@ -43,8 +43,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="56dp"
+                android:layout_marginEnd="8dp"
                 android:hint="@string/hintSearch"
                 android:maxLines="1"
+                android:singleLine="true"
                 android:scrollHorizontally="true"/>
         </androidx.cardview.widget.CardView>
 
@@ -78,6 +80,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvSort"
-        tools:listitem="@layout/item_course_home"/>
+        tools:listitem="@layout/item_course_home_and_favorites"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

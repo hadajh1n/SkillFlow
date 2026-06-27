@@ -30,6 +30,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvFavoritesTitle"
-        tools:listitem="@layout/item_course_home"/>
+        tools:listitem="@layout/item_course_home_and_favorites"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

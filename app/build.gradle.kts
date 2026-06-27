@@ -68,6 +68,10 @@ dependencies {
     // LeakCanary
     debugImplementation(libs.leakcanary.android)
 
+    // AdapterDelegates
+    implementation(libs.adapterdelegates4)
+    implementation(libs.adapterdelegates4.kotlin.dsl.viewbinding)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
