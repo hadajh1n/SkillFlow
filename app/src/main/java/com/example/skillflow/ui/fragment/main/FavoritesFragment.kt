@@ -62,11 +62,19 @@ class FavoritesFragment : Fragment() {
         }
     }
 
-    private fun observeViewModel() {
+    private fun observeViewModel() = with(binding) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.coursesFavorites.collect { list ->
                     courseAdapter.items = list
+
+                    if (list.isEmpty()) {
+                        rvFavotitesCourses.visibility = View.GONE
+                        llEmptyList.visibility = View.VISIBLE
+                    } else {
+                        rvFavotitesCourses.visibility = View.VISIBLE
+                        llEmptyList.visibility = View.GONE
+                    }
                 }
             }
         }

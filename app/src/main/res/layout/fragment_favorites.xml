@@ -32,4 +32,31 @@
         app:layout_constraintTop_toBottomOf="@+id/tvFavoritesTitle"
         tools:listitem="@layout/item_course_home_and_favorites"/>
 
+    <LinearLayout
+        android:id="@+id/llEmptyList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_empty_list" />
+
+        <TextView
+            android:id="@+id/tvEmptyList"
+            style="@style/tvEmptyList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvEmptyList"/>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,6 +11,8 @@
     <color name="iconFavoritesBg">#32333A4D</color>
     <color name="cvRateBg">#32333A4D</color>
     <color name="icon_arrow">#12B956</color>
+    <color name="icon_empty_list">#F2F2F3</color>
+    <color name="tvEmpty">#F2F2F3</color>
 
     // bottom_nav_menu
     <color name="bottomNavigationBg">#24252A</color>
@@ -70,6 +72,7 @@
 
     // fragment_favorites
     <color name="tvFavoritesTitle">#F2F2F3</color>
+    <color name="tvEmptyList">#F2F2F3</color>
 
     // fragment_profile
     <color name="cvProfile">#24252A</color>

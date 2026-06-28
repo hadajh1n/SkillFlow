@@ -112,6 +112,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="12dp"
+                android:maxLines="2"
+                android:ellipsize="end"
                 tools:text="Освойте backend-разработку и программирование на Java, фрейморки..."/>
 
             <LinearLayout
