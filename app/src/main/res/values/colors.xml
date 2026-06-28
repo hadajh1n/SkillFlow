@@ -34,6 +34,19 @@
     <color name="logoOKBg1">#F98509</color>
     <color name="logoOKBg2">#F95D00</color>
 
+    // dialog_bg
+    <color name="dialogLoadingBg">#26252D</color>
+
+    // dialog_loading
+    <color name="progLoading">#F2F2F3</color>
+    <color name="tvLoading">#F2F2F3</color>
+
+    // dialog_error
+    <color name="tvTitleError">#F2F2F3</color>
+    <color name="tvError">#F2F2F3</color>
+    <color name="btnCancelDialogBg">#F44336</color>
+    <color name="btnCancelDialogText">#F2F2F3</color>
+
     // fragment_home
     <color name="loupeSearch">#F2F2F3</color>
     <color name="cvSearchBg">#24252A</color>

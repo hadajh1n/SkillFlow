@@ -1,10 +1,10 @@
-package com.example.skillflow.ui.fragment
+package com.example.skillflow.ui.fragment.main
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.skillflow.core.navigation.setupBottomNavigation
 import com.example.skillflow.databinding.FragmentMainBinding
 

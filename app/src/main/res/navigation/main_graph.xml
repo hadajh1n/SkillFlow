@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.skillflow.ui.fragment.MainFragment"/>
+        android:name="com.example.skillflow.ui.fragment.main.MainFragment"/>
 
 </navigation>

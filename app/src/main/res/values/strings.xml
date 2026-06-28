@@ -18,6 +18,13 @@
     <string name="tvForgotPassword">Забыл пароль</string>
     <string name="error_invalid_email">Неверный формат email</string>
 
+    // dialog_loading
+    <string name="tvLoading">Выполняется вход...</string>
+
+    // dialog_error
+    <string name="tvTitleError">Ошибка входа</string>
+    <string name="btnCancelDialog">Закрыть</string>
+
     // fragment_home
     <string name="hintSearch">Поиск курсов...</string>
     <string name="tvSort">По дате добавления</string>

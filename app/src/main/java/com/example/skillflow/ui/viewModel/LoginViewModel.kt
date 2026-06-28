@@ -9,11 +9,24 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
+import retrofit2.HttpException
+import java.net.UnknownHostException
+
+sealed class LoginUIState {
+
+    object Standard : LoginUIState()
+    object Loading : LoginUIState()
+    object Success : LoginUIState()
+    data class Error(val message: String) : LoginUIState()
+}
 
 class LoginViewModel : ViewModel() {
 
     private val _email = MutableStateFlow("")
     private val _password = MutableStateFlow("")
+
+    private val _uiState = MutableStateFlow<LoginUIState>(LoginUIState.Standard)
+    val uiState: StateFlow<LoginUIState> = _uiState.asStateFlow()
 
     private val _isLoginEnabled = MutableStateFlow(false)
     val isLoginEnabled: StateFlow<Boolean> = _isLoginEnabled.asStateFlow()
@@ -37,13 +50,22 @@ class LoginViewModel : ViewModel() {
 
     fun login(onSuccess: () -> Unit) {
         viewModelScope.launch {
+            _uiState.value = LoginUIState.Loading
+
             try {
                 val response = RetrofitClient.courseApi.getCourses()
 
                 AppRepository.setCourse(response.courses)
+                _uiState.value = LoginUIState.Success
                 onSuccess()
             } catch (e: Exception) {
                 e.printStackTrace()
+                val errorMessage = when (e) {
+                    is UnknownHostException -> "Нет подключения к интернету"
+                    is HttpException -> "Ошибка сервера: ${e.code()}"
+                    else -> e.localizedMessage ?: "Неизвестная ошибка"
+                }
+                _uiState.value = LoginUIState.Error(errorMessage)
             }
         }
     }

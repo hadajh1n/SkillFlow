@@ -51,6 +51,35 @@
         <item name="android:textColor">@color/tvForgotPassword</item>
     </style>
 
+    // dialog_loading
+
+    <style name="tvLoading" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">roboto</item>
+        <item name="android:textColor">@color/tvLoading</item>
+    </style>
+
+    // dialog_error
+
+    <style name="tvTitleError" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/tvTitleError</item>
+    </style>
+
+    <style name="tvError" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">roboto</item>
+        <item name="android:textColor">@color/tvError</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="btnCancelDialog" parent="Widget.Material3.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/btnCancelDialogText</item>
+        <item name="android:backgroundTint">@color/btnCancelDialogBg</item>
+    </style>
+
     // fragment_home
 
     <style name="edtSearch" parent="Widget.AppCompat.EditText">

@@ -1,5 +1,6 @@
 package com.example.skillflow.ui.fragment.auth
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -16,7 +17,11 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.skillflow.R
 import com.example.skillflow.core.utils.Constants
+import com.example.skillflow.core.utils.hideKeyboard
+import com.example.skillflow.databinding.DialogErrorBinding
+import com.example.skillflow.databinding.DialogLoadingBinding
 import com.example.skillflow.databinding.FragmentLoginBinding
+import com.example.skillflow.ui.viewModel.LoginUIState
 import com.example.skillflow.ui.viewModel.LoginViewModel
 import kotlinx.coroutines.launch
 
@@ -26,6 +31,9 @@ class LoginFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: LoginViewModel by viewModels()
+
+    private var loadingDialog: AlertDialog? = null
+    private var errorDialog: AlertDialog? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -46,6 +54,9 @@ class LoginFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
+
+        loadingDialog?.dismiss()
+        errorDialog?.dismiss()
         _binding = null
     }
 
@@ -76,10 +87,35 @@ class LoginFragment : Fragment() {
                 }
             }
         }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.uiState.collect { state ->
+                    when (state) {
+                        is LoginUIState.Standard -> {
+                            hideLoadingDialog()
+                            hideErrorDialog()
+                        }
+                        is LoginUIState.Loading -> {
+                            showLoadingDialog()
+                        }
+                        is LoginUIState.Success -> {
+                            hideLoadingDialog()
+                            hideErrorDialog()
+                        }
+                        is LoginUIState.Error -> {
+                            hideLoadingDialog()
+                            showErrorDialog(state.message)
+                        }
+                    }
+                }
+            }
+        }
     }
 
     private fun setupButtons() = with(binding) {
         btnEntrance.setOnClickListener {
+            hideKeyboard()
             viewModel.login {
                 findNavController().navigate(R.id.action_login_to_main)
             }
@@ -97,5 +133,43 @@ class LoginFragment : Fragment() {
     private fun openBrowser(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         startActivity(intent)
+    }
+
+    private fun showLoadingDialog() {
+        if (loadingDialog?.isShowing == true) return
+
+        val dialogBinding = DialogLoadingBinding.inflate(layoutInflater)
+        loadingDialog = AlertDialog.Builder(requireContext())
+            .setView(dialogBinding.root)
+            .setCancelable(false)
+            .create()
+
+        loadingDialog?.show()
+    }
+
+    private fun hideLoadingDialog() {
+        loadingDialog?.dismiss()
+        loadingDialog = null
+    }
+
+    private fun showErrorDialog(message: String) {
+        val dialogBinding = DialogErrorBinding.inflate(layoutInflater)
+        errorDialog = AlertDialog.Builder(requireContext())
+            .setView(dialogBinding.root)
+            .setCancelable(true)
+            .create()
+
+        dialogBinding.tvError.text = message
+
+        dialogBinding.btnCancelDialog.setOnClickListener {
+            errorDialog?.dismiss()
+        }
+
+        errorDialog?.show()
+    }
+
+    private fun hideErrorDialog() {
+        errorDialog?.dismiss()
+        errorDialog = null
     }
 }
