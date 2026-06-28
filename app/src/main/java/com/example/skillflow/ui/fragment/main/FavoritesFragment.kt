@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.skillflow.MainTabsGraphDirections
 import com.example.skillflow.databinding.FragmentFavoritesBinding
 import com.example.skillflow.ui.adapter.MainAdapter
 import com.example.skillflow.ui.viewModel.FavoritesViewModel
@@ -29,8 +30,7 @@ class FavoritesFragment : Fragment() {
             viewModel.toggleFavorite(course.id)
         },
         onDetailsClick = { course ->
-            val action = FavoritesFragmentDirections.actionFavoritesToDetails(course.id)
-            findNavController().navigate(action)
+            findNavController().navigate(MainTabsGraphDirections.actionGlobalDetails(course.id))
         }
     )
 

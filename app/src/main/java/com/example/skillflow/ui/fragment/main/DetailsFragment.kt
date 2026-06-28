@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.skillflow.R
 import com.example.skillflow.data.dataclass.CourseUI
@@ -48,7 +49,7 @@ class DetailsFragment : Fragment() {
 
     private fun setupBackButton() = with(binding) {
         imBackDetails.setOnClickListener {
-            requireActivity().onBackPressedDispatcher.onBackPressed()
+            findNavController().popBackStack()
         }
     }
 

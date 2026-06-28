@@ -16,9 +16,6 @@
         android:theme="@style/Theme.SkillFlow">
         <activity
             android:name=".ui.activity.MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.activity.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,26 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_main"
+    android:id="@+id/main_tabs_graph"
     app:startDestination="@id/homeFragment">
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.skillflow.ui.fragment.main.HomeFragment">
-
-        <action
-            android:id="@+id/actionHomeToDetails"
-            app:destination="@id/detailsFragment"/>
-    </fragment>
+        android:name="com.example.skillflow.ui.fragment.main.HomeFragment"/>
 
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.skillflow.ui.fragment.main.FavoritesFragment">
-
-        <action
-            android:id="@+id/actionFavoritesToDetails"
-            app:destination="@id/detailsFragment"/>
-    </fragment>
+        android:name="com.example.skillflow.ui.fragment.main.FavoritesFragment"/>
 
     <fragment
         android:id="@+id/profileFragment"
@@ -34,5 +24,9 @@
             android:name="courseId"
             app:argType="integer"/>
     </fragment>
+
+    <action
+        android:id="@+id/action_global_details"
+        app:destination="@id/detailsFragment"/>
 
 </navigation>

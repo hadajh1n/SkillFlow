@@ -81,7 +81,7 @@ class LoginFragment : Fragment() {
     private fun setupButtons() = with(binding) {
         btnEntrance.setOnClickListener {
             viewModel.login {
-                findNavController().navigate(R.id.mainFragment)
+                findNavController().navigate(R.id.action_login_to_main)
             }
         }
 

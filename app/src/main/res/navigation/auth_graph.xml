@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_login"
+    android:id="@+id/auth_graph"
     app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.skillflow.ui.fragment.auth.LoginFragment"/>
-
-    <fragment
-        android:id="@+id/mainFragment"
-        android:name="com.example.skillflow.ui.fragment.MainFragment"/>
 
 </navigation>
