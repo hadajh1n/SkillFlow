@@ -46,6 +46,7 @@ class HomeFragment : Fragment() {
 
         setupRecyclerView()
         observeViewModel()
+        setupSort()
     }
 
     override fun onDestroyView() = with(binding) {
@@ -61,13 +62,27 @@ class HomeFragment : Fragment() {
         }
     }
 
-    private fun observeViewModel() {
+    private fun observeViewModel() = with(binding) {
         viewLifecycleOwner.lifecycleScope.launch {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.courses.collect { list ->
                     courseAdapter.items = list
                 }
             }
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.sortOrder.collect { order ->
+                    tvSort.text = order.label
+                }
+            }
+        }
+    }
+
+    private fun setupSort() = with(binding) {
+        tvSort.setOnClickListener {
+            viewModel.toggleSort()
         }
     }
 }
