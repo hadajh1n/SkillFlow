@@ -5,6 +5,7 @@ import com.example.skillflow.core.app.SkillFlowApp
 import com.example.skillflow.data.dataclass.CourseDTO
 import com.example.skillflow.data.mapper.CourseDtoEntityMapper
 import com.example.skillflow.data.room.AppDatabase
+import com.example.skillflow.data.room.CourseEntity
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
@@ -41,5 +42,9 @@ object AppRepository {
 
     suspend fun toggleFavorite(courseId: Int) {
         courseDao.toggleFavorite(courseId)
+    }
+
+    suspend fun getCourseById(id: Int): CourseEntity {
+        return courseDao.getCourseById(id)
     }
 }

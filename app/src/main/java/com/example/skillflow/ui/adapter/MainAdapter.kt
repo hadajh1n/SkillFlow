@@ -5,12 +5,14 @@ import com.example.skillflow.data.dataclass.CourseUI
 import com.hannesdorfmann.adapterdelegates4.AsyncListDifferDelegationAdapter
 
 class MainAdapter(
-    onItemClick: (CourseUI) -> Unit,
-    onFavoriteClick: (CourseUI) -> Unit
+    onFavoriteClick: (CourseUI) -> Unit,
+    onDetailsClick: (CourseUI) -> Unit,
 ) : AsyncListDifferDelegationAdapter<CourseUI>(CourseDiffCallback()) {
 
     init {
-        delegatesManager.addDelegate(courseAdapter(onItemClick, onFavoriteClick))
+        delegatesManager.addDelegate(
+            courseAdapter(onFavoriteClick, onDetailsClick)
+        )
     }
 
     class CourseDiffCallback : DiffUtil.ItemCallback<CourseUI>() {

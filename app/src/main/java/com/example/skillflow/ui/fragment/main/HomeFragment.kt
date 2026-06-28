@@ -9,8 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.skillflow.R
 import com.example.skillflow.databinding.FragmentHomeBinding
 import com.example.skillflow.ui.adapter.MainAdapter
 import com.example.skillflow.ui.viewModel.HomeViewModel
@@ -24,11 +24,12 @@ class HomeFragment : Fragment() {
     private val viewModel: HomeViewModel by viewModels()
 
     private val courseAdapter = MainAdapter(
-        onItemClick = { course ->
-
-        },
         onFavoriteClick = { course ->
             viewModel.toggleFavorite(course.id)
+        },
+        onDetailsClick = { course ->
+            val action = HomeFragmentDirections.actionHomeToDetails(course.id)
+            findNavController().navigate(action)
         }
     )
 

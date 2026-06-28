@@ -20,4 +20,7 @@ interface CourseDao {
 
     @Query("UPDATE courses SET hasLike = NOT hasLike WHERE id = :courseId")
     suspend fun toggleFavorite(courseId: Int)
+
+    @Query("SELECT * FROM courses WHERE id = :id")
+    suspend fun getCourseById(id: Int): CourseEntity
 }

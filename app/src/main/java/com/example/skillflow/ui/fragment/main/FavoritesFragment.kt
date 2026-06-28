@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.skillflow.databinding.FragmentFavoritesBinding
 import com.example.skillflow.ui.adapter.MainAdapter
@@ -24,11 +25,12 @@ class FavoritesFragment : Fragment() {
     private val viewModel: FavoritesViewModel by viewModels()
 
     private val courseAdapter = MainAdapter(
-        onItemClick = { course ->
-
-        },
         onFavoriteClick = { course ->
             viewModel.toggleFavorite(course.id)
+        },
+        onDetailsClick = { course ->
+            val action = FavoritesFragmentDirections.actionFavoritesToDetails(course.id)
+            findNavController().navigate(action)
         }
     )
 

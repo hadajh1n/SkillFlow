@@ -6,15 +6,14 @@ import com.example.skillflow.databinding.ItemCourseHomeAndFavoritesBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 
 fun courseAdapter(
-    onItemClick: (CourseUI) -> Unit,
-    onFavoriteClick: (CourseUI) -> Unit
+    onFavoriteClick: (CourseUI) -> Unit,
+    onDetailsClick: (CourseUI) -> Unit,
 ) = adapterDelegateViewBinding<CourseUI, CourseUI, ItemCourseHomeAndFavoritesBinding>(
     { layoutInflater, root -> ItemCourseHomeAndFavoritesBinding
         .inflate(layoutInflater, root, false) }
 ) {
-    binding.root.setOnClickListener { onItemClick(item) }
-
     binding.imAddFavorites.setOnClickListener { onFavoriteClick(item) }
+    binding.tvItemCourseDetails.setOnClickListener { onDetailsClick(item) }
 
     bind {
         with(binding) {

@@ -34,8 +34,10 @@
 
     // fragment_details
     <string name="tvTitleAuthorDescription">Автор</string>
+    <string name="tvAuthorDescription">Merion Academy</string>
     <string name="btnStartCourseText">Начать курс</string>
     <string name="btnPlatformCourseText">Перейти на платформу</string>
     <string name="tvTitleAboutCourseDetails">О курсе</string>
+    <string name="tvAboutCourseDetails">У вас будет 7 видеоуроков в высоком качестве. На них спикер объясняет теорию и показывает как выполнять практические задания. Доступ к материалам сохраняется на 2 года\n\nКроме теоретических материалов вас ждут тесты и практические задания. Они помогут лучше запомнить новую информацию и прокачать навыки, которые необходимы для реальной работы с RabbitMQ.</string>
 
 </resources>

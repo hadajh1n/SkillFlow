@@ -26,5 +26,4 @@ class FavoritesViewModel : ViewModel() {
             AppRepository.toggleFavorite(courseId)
         }
     }
-
 }
