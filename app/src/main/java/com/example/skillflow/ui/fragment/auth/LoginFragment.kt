@@ -16,7 +16,6 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import com.example.skillflow.R
-import com.example.skillflow.core.utils.Constants
 import com.example.skillflow.core.utils.hideKeyboard
 import com.example.skillflow.databinding.DialogErrorBinding
 import com.example.skillflow.databinding.DialogLoadingBinding
@@ -26,6 +25,11 @@ import com.example.skillflow.ui.viewModel.LoginViewModel
 import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
+
+    companion object {
+        private const val VK_URL = "https://vk.com/"
+        private const val OK_URL = "https://ok.ru/"
+    }
 
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
@@ -121,8 +125,8 @@ class LoginFragment : Fragment() {
             }
         }
 
-        imLogoVK.setOnClickListener { openBrowser(Constants.VK_URL) }
-        imLogoOK.setOnClickListener { openBrowser(Constants.OK_URL) }
+        imLogoVK.setOnClickListener { openBrowser(VK_URL) }
+        imLogoOK.setOnClickListener { openBrowser(OK_URL) }
 
         tvRegistration.isEnabled = false
         tvForgotPassword.isEnabled = false

@@ -9,6 +9,8 @@ object EmailValidator {
         if (email.isBlank()) return false
         if (Patterns.EMAIL_ADDRESS.matcher(email).matches()) return true
 
-        return email.matches(Regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"))
+        return email.matches(
+            Regex("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(\\.[a-zA-Z0-9-]+)*\\.[a-zA-Z]{2,}$")
+        )
     }
 }
