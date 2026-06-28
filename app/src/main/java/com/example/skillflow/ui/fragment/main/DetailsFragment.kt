@@ -71,11 +71,11 @@ class DetailsFragment : Fragment() {
     }
 
     private fun getCourseImageRes(courseId: Int): Int = when (courseId) {
-        100 -> R.drawable.img
-        101 -> R.drawable.img
-        102 -> R.drawable.img
-        103 -> R.drawable.img
-        104 -> R.drawable.img
-        else -> R.drawable.img
+        100 -> R.drawable.img_java
+        101 -> R.drawable.img_java
+        102 -> R.drawable.img_java
+        103 -> R.drawable.img_java
+        104 -> R.drawable.img_java
+        else -> R.drawable.img_java
     }
 }

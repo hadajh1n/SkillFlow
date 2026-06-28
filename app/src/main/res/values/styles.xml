@@ -99,7 +99,7 @@
         <item name="android:textColor">@color/tvSort</item>
     </style>
 
-    // item_course_home
+    // item_course_home_and_favorites
 
     <style name="tvTitleItemCourse" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
@@ -164,6 +164,14 @@
         <item name="android:textSize">22sp</item>
         <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvProfileCourses</item>
+    </style>
+
+    // item_course_profile
+
+    <style name="tvItemCoursePercent" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textColor">@color/tvItemCoursePercent</item>
     </style>
 
     // fragment_details

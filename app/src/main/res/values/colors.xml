@@ -78,6 +78,10 @@
     <color name="viewSeparatorProfile">#4D555E</color>
     <color name="tvProfileCourses">#F2F2F3</color>
 
+    // item_course_profile
+    <color name="cvItemCourseProfile">#24252A</color>
+    <color name="tvItemCoursePercent">#12B956</color>
+
     // fragment_details
     <color name="iconBackDetails">#151515</color>
     <color name="iconBackDetailsBg">#F2F2F3</color>

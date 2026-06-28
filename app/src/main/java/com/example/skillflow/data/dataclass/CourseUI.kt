@@ -9,4 +9,10 @@ data class CourseUI(
     val startDate: String,
     val hasLike: Boolean,
     val publishDate: String,
+
+    // Заглушка profile
+    val percent: Int = 0,
+    val progress: Int = 0,
+    val lessonsCompleted: Int = 0,
+    val lessonsTotal: Int = 0
 )
