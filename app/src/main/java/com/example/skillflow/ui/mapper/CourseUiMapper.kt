@@ -1,5 +1,6 @@
 package com.example.skillflow.ui.mapper
 
+import com.example.skillflow.core.utils.formatDate
 import com.example.skillflow.data.dataclass.CourseUI
 import com.example.skillflow.data.room.CourseEntity
 
@@ -12,7 +13,7 @@ class CourseUiMapper {
             text = entity.text,
             price = "${entity.price} ₽",
             rate = entity.rate,
-            startDate = entity.startDate,
+            startDate = formatDate(entity.startDate),
             hasLike = entity.hasLike,
             publishDate = entity.publishDate,
         )
