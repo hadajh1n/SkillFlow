@@ -1,6 +1,7 @@
 package com.example.skillflow.ui.adapter
 
 import com.example.skillflow.R
+import com.example.skillflow.core.utils.Constants.PAYLOAD_FAVORITE
 import com.example.skillflow.data.dataclass.CourseUI
 import com.example.skillflow.databinding.ItemCourseHomeAndFavoritesBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
@@ -15,7 +16,21 @@ fun courseAdapter(
     binding.imAddFavorites.setOnClickListener { onFavoriteClick(item) }
     binding.tvItemCourseDetails.setOnClickListener { onDetailsClick(item) }
 
-    bind {
+    bind { payloads ->
+        with(binding) {
+            if (payloads.contains(PAYLOAD_FAVORITE)) {
+
+                imAddFavorites.setImageResource(
+                    if (item.hasLike)
+                        R.drawable.icon_favorites_added
+                    else
+                        R.drawable.icon_favorites_removed
+                )
+
+                return@bind
+            }
+        }
+
         with(binding) {
             imItemCourse.setImageResource(getCourseImageRes(item.id))
             tvTitleItemCourse.text = item.title
@@ -23,13 +38,12 @@ fun courseAdapter(
             tvItemCourseCost.text = item.price
             tvRate.text = item.rate
             tvDateCourse.text = item.startDate
-
-            val favIcon = if (item.hasLike) {
-                R.drawable.icon_favorites_added
-            } else {
-                R.drawable.icon_favorites_removed
-            }
-            imAddFavorites.setImageResource(favIcon)
+            imAddFavorites.setImageResource(
+                if (item.hasLike)
+                    R.drawable.icon_favorites_added
+                else
+                    R.drawable.icon_favorites_removed
+            )
         }
     }
 }
