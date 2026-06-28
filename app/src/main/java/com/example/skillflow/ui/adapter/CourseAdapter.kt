@@ -27,7 +27,7 @@ fun courseAdapter(
             val favIcon = if (item.hasLike) {
                 R.drawable.icon_favorites_added
             } else {
-                R.drawable.icon_favorites
+                R.drawable.icon_favorites_removed
             }
             imAddFavorites.setImageResource(favIcon)
         }

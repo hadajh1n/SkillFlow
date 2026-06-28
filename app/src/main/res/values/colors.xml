@@ -7,8 +7,10 @@
     <color name="general_theme_background">#151515</color>
     <color name="icon_star">#12B956</color>
     <color name="iconFavoritesAdded">#12B956</color>
+    <color name="iconFavoritesRemoved">#F2F2F3</color>
     <color name="iconFavoritesBg">#32333A4D</color>
     <color name="cvRateBg">#32333A4D</color>
+    <color name="icon_arrow">#12B956</color>
 
     // bottom_nav_menu
     <color name="bottomNavigationBg">#24252A</color>
@@ -57,7 +59,7 @@
     <color name="tvSort">#12B956</color>
     <color name="iconArrow">#12B956</color>
 
-    // item_course_home
+    // item_course_home_and_favorites
     <color name="cvItemCourse">#24252A</color>
     <color name="tvTitleItemCourse">#F2F2F3</color>
     <color name="tvItemCourseDescription">#B5B8B1</color>

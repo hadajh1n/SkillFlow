@@ -26,7 +26,7 @@
     <string name="btnCancelDialog">Закрыть</string>
 
     // fragment_home
-    <string name="hintSearch">Поиск курсов...</string>
+    <string name="hintSearch">Search courses...</string>
     <string name="tvSort">По дате добавления</string>
 
     // fragment_favorites
@@ -46,5 +46,8 @@
     <string name="btnPlatformCourseText">Перейти на платформу</string>
     <string name="tvTitleAboutCourseDetails">О курсе</string>
     <string name="tvAboutCourseDetails">У вас будет 7 видеоуроков в высоком качестве. На них спикер объясняет теорию и показывает как выполнять практические задания. Доступ к материалам сохраняется на 2 года\n\nКроме теоретических материалов вас ждут тесты и практические задания. Они помогут лучше запомнить новую информацию и прокачать навыки, которые необходимы для реальной работы с RabbitMQ.</string>
+
+    // item_course_home_and_favorites
+    <string name="tvItemCourseDetails">Подробнее</string>
 
 </resources>

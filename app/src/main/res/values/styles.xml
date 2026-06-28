@@ -5,48 +5,48 @@
 
     <style name="tvTitleEntrance" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">28sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvTitleEntrance</item>
     </style>
 
     <style name="tvTitleEmailPassword" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvTitleEmailPassword</item>
     </style>
 
     <style name="edtEmailPassword" parent="Widget.AppCompat.EditText">
-        <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/edtEmailPassword</item>
         <item name="android:textColorHint">@color/edtEmailPasswordHint</item>
         <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="btnEntrance" parent="Widget.Material3.Button">
-        <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:backgroundTint">@color/btnEntranceBg</item>
         <item name="android:textColor">@color/btnEntranceText</item>
     </style>
 
     <style name="tvTitleRegistration" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tvTitleRegistration</item>
     </style>
 
     <style name="tvRegistration" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tvRegistration</item>
     </style>
 
     <style name="tvForgotPassword" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tvForgotPassword</item>
     </style>
@@ -55,7 +55,7 @@
 
     <style name="tvLoading" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvLoading</item>
     </style>
 
@@ -63,19 +63,21 @@
 
     <style name="tvTitleError" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tvTitleError</item>
     </style>
 
     <style name="tvError" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:fontFamily">roboto</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvError</item>
         <item name="android:textAlignment">center</item>
     </style>
 
     <style name="btnCancelDialog" parent="Widget.Material3.Button">
         <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/btnCancelDialogText</item>
         <item name="android:backgroundTint">@color/btnCancelDialogBg</item>
     </style>
@@ -83,14 +85,16 @@
     // fragment_home
 
     <style name="edtSearch" parent="Widget.AppCompat.EditText">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/edtSearchText</item>
         <item name="android:textColorHint">@color/edtSearchHint</item>
         <item name="android:background">@color/transparent</item>
     </style>
 
     <style name="tvSort" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tvSort</item>
     </style>
@@ -99,34 +103,38 @@
 
     <style name="tvTitleItemCourse" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvTitleItemCourse</item>
     </style>
 
     <style name="tvItemCourseDescription" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvItemCourseDescription</item>
     </style>
 
     <style name="tvItemCourseCost" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
-        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvItemCourseCost</item>
     </style>
 
     <style name="tvItemCourseDetails" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/tvItemCourseDetails</item>
     </style>
 
     <style name="tvRate" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvRate</item>
     </style>
 
     <style name="tvDateCourse" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvDateCourse</item>
     </style>
 
@@ -134,6 +142,7 @@
 
     <style name="tvFavoritesTitle" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvFavoritesTitle</item>
     </style>
 
@@ -141,16 +150,19 @@
 
     <style name="tvProfileTitle" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvProfileTitle</item>
     </style>
 
     <style name="tvProfileButtons" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvProfileButtons</item>
     </style>
 
     <style name="tvProfileCourses" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvProfileCourses</item>
     </style>
 
@@ -158,38 +170,45 @@
 
     <style name="tvTitleCourseDetails" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvTitleCourseDetails</item>
     </style>
 
     <style name="tvTitleAuthorDescription" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvTitleAuthorDescription</item>
     </style>
 
     <style name="tvAuthorDescription" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvAuthorDescription</item>
     </style>
 
     <style name="btnStartCourseText" parent="Widget.Material3.Button">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:backgroundTint">@color/btnStartCourseBg</item>
         <item name="android:textColor">@color/btnStartCourseText</item>
     </style>
 
     <style name="btnPlatformCourseText" parent="Widget.Material3.Button">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:backgroundTint">@color/btnPlatformCourseBg</item>
         <item name="android:textColor">@color/btnPlatformCourseText</item>
     </style>
 
     <style name="tvTitleAboutCourseDetails" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">22sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvTitleAboutCourseDetails</item>
     </style>
 
     <style name="tvAboutCourseDetails" parent="Widget.AppCompat.TextView">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/roboto</item>
         <item name="android:textColor">@color/tvAboutCourseDetails</item>
     </style>
 

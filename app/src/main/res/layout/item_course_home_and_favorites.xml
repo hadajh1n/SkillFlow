@@ -42,7 +42,8 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginEnd="8dp"
                     android:layout_gravity="end"
-                    android:src="@drawable/icon_favorites"
+                    android:scaleType="center"
+                    android:src="@drawable/icon_favorites_removed"
                     android:background="@drawable/background_favorites"/>
                 
                 <LinearLayout
@@ -68,6 +69,7 @@
                             android:layout_height="wrap_content"
                             android:padding="4dp"
                             android:drawableStart="@drawable/icon_star"
+                            android:drawablePadding="5dp"
                             tools:text="4.9"/>
 
                     </androidx.cardview.widget.CardView>
@@ -110,7 +112,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="12dp"
                 android:hint="Освойте backend-разработку и программирование на Java, фрейморки..."
                 android:textColorHint="@color/tvItemCourseDescription"/>
 
@@ -120,8 +122,8 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginHorizontal="16dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginBottom="10dp">
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="16dp">
 
                 <TextView
                     android:id="@+id/tvItemCourseCost"
@@ -139,9 +141,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="end"
-                    android:hint="Подробнее"
+                    android:text="@string/tvItemCourseDetails"
                     android:drawableEnd="@drawable/icon_arrow"
-                    android:textColorHint="@color/tvItemCourseDetails"
+                    android:drawablePadding="5dp"
                     android:layout_weight="1" />
 
             </LinearLayout>
