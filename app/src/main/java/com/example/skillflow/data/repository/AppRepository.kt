@@ -1,43 +1,41 @@
 package com.example.skillflow.data.repository
 
-import androidx.room.Room
-import com.example.skillflow.core.app.SkillFlowApp
 import com.example.skillflow.data.dataclass.CourseDTO
 import com.example.skillflow.data.mapper.CourseDtoEntityMapper
-import com.example.skillflow.data.room.AppDatabase
+import com.example.skillflow.data.room.CourseDao
 import com.example.skillflow.data.room.CourseEntity
+import com.example.skillflow.network.CourseApi
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 
-object AppRepository {
-
-    private val courseDtoMapper = CourseDtoEntityMapper()
-
+class AppRepository(
+    private val courseDao: CourseDao,
+    private val courseDtoMapper: CourseDtoEntityMapper,
+    private val courseApi: CourseApi,
+) {
     private val cacheMutex = Mutex()
 
-    private val db by lazy {
-        Room.databaseBuilder(
-            SkillFlowApp.Companion.instance.applicationContext,
-            AppDatabase::class.java,
-            "skillflow-db"
-        ).build()
+    suspend fun loadCourses(): Result<Unit> {
+        return try {
+            val response = courseApi.getCourses()
+            setCourse(response.courses)
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
     }
 
-    private val courseDao = db.courseDao()
-
-    suspend fun setCourse(
+    private suspend fun setCourse(
         dto: List<CourseDTO>
     ) = cacheMutex.withLock {
 
         dto.forEach { dto ->
             val entity = courseDtoMapper.fromDtoToEntity(dto)
-
             courseDao.insertCourse(entity)
         }
     }
 
     fun getAllCourses() = courseDao.getAllCourses()
-
     fun getAllCoursesFavorites() = courseDao.getAllCoursesFavorites()
 
     suspend fun toggleFavorite(courseId: Int) {

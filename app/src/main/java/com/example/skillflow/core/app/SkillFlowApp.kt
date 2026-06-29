@@ -1,15 +1,24 @@
 package com.example.skillflow.core.app
 
 import android.app.Application
+import com.example.skillflow.di.*
+import org.koin.android.ext.koin.androidContext
+import org.koin.core.context.startKoin
 
 class SkillFlowApp : Application() {
 
-    companion object {
-        lateinit var instance: SkillFlowApp
-    }
-
     override fun onCreate() {
         super.onCreate()
-        instance = this@SkillFlowApp
+
+        startKoin {
+            androidContext(this@SkillFlowApp)
+            modules(
+                networkModule,
+                databaseModule,
+                repositoryModule,
+                viewModelModule,
+                mapperModule,
+            )
+        }
     }
 }

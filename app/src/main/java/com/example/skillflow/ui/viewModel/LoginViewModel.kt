@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.skillflow.core.utils.EmailValidator
 import com.example.skillflow.data.repository.AppRepository
-import com.example.skillflow.network.RetrofitClient
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,7 +19,9 @@ sealed class LoginUIState {
     data class Error(val message: String) : LoginUIState()
 }
 
-class LoginViewModel : ViewModel() {
+class LoginViewModel(
+    private val repository: AppRepository
+) : ViewModel() {
 
     private val _email = MutableStateFlow("")
     private val _password = MutableStateFlow("")
@@ -52,20 +53,20 @@ class LoginViewModel : ViewModel() {
         viewModelScope.launch {
             _uiState.value = LoginUIState.Loading
 
-            try {
-                val response = RetrofitClient.courseApi.getCourses()
+            val result = repository.loadCourses()
 
-                AppRepository.setCourse(response.courses)
+            if (result.isSuccess) {
                 _uiState.value = LoginUIState.Success
                 onSuccess()
-            } catch (e: Exception) {
-                e.printStackTrace()
-                val errorMessage = when (e) {
-                    is UnknownHostException -> "Нет подключения к интернету"
-                    is HttpException -> "Ошибка сервера: ${e.code()}"
-                    else -> e.localizedMessage ?: "Неизвестная ошибка"
+            } else {
+                result.exceptionOrNull()?.let { e ->
+                    val errorMessage = when (e) {
+                        is UnknownHostException -> "Нет подключения к интернету"
+                        is HttpException -> "Ошибка сервера: ${e.code()}"
+                        else -> e.localizedMessage ?: "Неизвестная ошибка"
+                    }
+                    _uiState.value = LoginUIState.Error(errorMessage)
                 }
-                _uiState.value = LoginUIState.Error(errorMessage)
             }
         }
     }

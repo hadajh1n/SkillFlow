@@ -9,16 +9,17 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 
-class DetailsViewModel : ViewModel() {
-
-    private val mapper = CourseUiMapper()
+class DetailsViewModel(
+    private val repository: AppRepository,
+    private val mapper: CourseUiMapper,
+) : ViewModel() {
 
     private val _course = MutableStateFlow<CourseUI?>(null)
     val course: StateFlow<CourseUI?> = _course
 
     fun loadCourse(courseId: Int) {
         viewModelScope.launch {
-            val entity = AppRepository.getCourseById(courseId)
+            val entity = repository.getCourseById(courseId)
             _course.value = mapper.map(entity)
         }
     }

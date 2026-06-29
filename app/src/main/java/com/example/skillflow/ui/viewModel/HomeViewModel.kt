@@ -11,9 +11,10 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class HomeViewModel : ViewModel() {
-
-    private val mapper = CourseUiMapper()
+class HomeViewModel(
+    private val repository: AppRepository,
+    private val mapper: CourseUiMapper,
+) : ViewModel() {
 
     val sortOrder = MutableStateFlow(SortOrder.DESC)
 
@@ -23,7 +24,7 @@ class HomeViewModel : ViewModel() {
             else SortOrder.DESC
     }
 
-    val courses = AppRepository.getAllCourses()
+    val courses = repository.getAllCourses()
         .combine(sortOrder) { entities, order ->
             val sorted = when (order) {
                 SortOrder.ASC -> entities.sortedBy { it.publishDate }
@@ -40,7 +41,7 @@ class HomeViewModel : ViewModel() {
 
     fun toggleFavorite(courseId: Int) {
         viewModelScope.launch {
-            AppRepository.toggleFavorite(courseId)
+            repository.toggleFavorite(courseId)
         }
     }
 }

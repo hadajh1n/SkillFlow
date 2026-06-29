@@ -9,11 +9,12 @@ import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 
-class FavoritesViewModel : ViewModel() {
+class FavoritesViewModel(
+    private val repository: AppRepository,
+    private val mapper: CourseUiMapper,
+) : ViewModel() {
 
-    private val mapper = CourseUiMapper()
-
-    val coursesFavorites = AppRepository.getAllCoursesFavorites()
+    val coursesFavorites = repository.getAllCoursesFavorites()
         .map { entities -> entities.map { mapper.map(it) } }
         .stateIn(
             viewModelScope,
@@ -23,7 +24,7 @@ class FavoritesViewModel : ViewModel() {
 
     fun toggleFavorite(courseId: Int) {
         viewModelScope.launch {
-            AppRepository.toggleFavorite(courseId)
+            repository.toggleFavorite(courseId)
         }
     }
 }

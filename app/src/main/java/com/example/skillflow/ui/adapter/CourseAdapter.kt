@@ -48,7 +48,6 @@ fun courseAdapter(
     }
 }
 
-// Так как полей с url в json нет сделал заглушку
 private fun getCourseImageRes(courseId: Int): Int = when (courseId) {
     100 -> R.drawable.img_java
     101 -> R.drawable.img_3d

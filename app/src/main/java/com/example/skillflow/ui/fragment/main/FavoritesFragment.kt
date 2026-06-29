@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
@@ -16,6 +15,7 @@ import com.example.skillflow.databinding.FragmentFavoritesBinding
 import com.example.skillflow.ui.adapter.MainAdapter
 import com.example.skillflow.ui.viewModel.FavoritesViewModel
 import kotlinx.coroutines.launch
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import kotlin.getValue
 
 class FavoritesFragment : Fragment() {
@@ -23,7 +23,7 @@ class FavoritesFragment : Fragment() {
     private var _binding: FragmentFavoritesBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: FavoritesViewModel by viewModels()
+    private val viewModel: FavoritesViewModel by viewModel()
 
     private val courseAdapter = MainAdapter(
         onFavoriteClick = { course ->

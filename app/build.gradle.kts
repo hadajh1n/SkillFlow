@@ -73,6 +73,10 @@ dependencies {
     implementation(libs.adapterdelegates4)
     implementation(libs.adapterdelegates4.kotlin.dsl.viewbinding)
 
+    // Koin
+    implementation(platform(libs.koin.bom))
+    implementation(libs.koin.android)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
